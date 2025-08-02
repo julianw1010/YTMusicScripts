@@ -73,7 +73,7 @@ def main():
                 try:
                     # Scroll the button into view
                     driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", button)
-                    time.sleep(0.1)  # Minimal delay for smooth scrolling
+                    time.sleep(0.05)  # Ultra minimal delay for smooth scrolling
                     
                     # Click the button
                     button.click()
@@ -83,8 +83,8 @@ def main():
                     if (i + 1) % 10 == 0:
                         print(f"Progress: {i + 1}/{total_unliked} songs liked")
                     
-                    # Minimal delay to avoid rate limiting
-                    time.sleep(0.2)
+                    # Ultra minimal delay to avoid rate limiting
+                    time.sleep(0.1)
                     
                 except Exception as e:
                     print(f"Error liking song {i + 1}: {e}")
